@@ -1,0 +1,124 @@
+# Reading pref.tcl
+# //  Questa Altera Starter FPGA Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do final_proj_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is bvu1@ECE-MJ0FRCEE.
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Errors: 0, Warnings: 1
+# vmap work rtl_work
+# Questa Altera Starter FPGA Edition-64 vmap 2025.2 Lib Mapping Utility 2025.05 May 31 2025
+# vmap work rtl_work 
+# ** Note: (vmap-220) 'c:/altera_lite/25.1std/questa_fse/win64/../modelsim.ini' is used as the ini file.
+# Copying c:/altera_lite/25.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/bvu1/Downloads/final_proj/InstructionMemory.vhd}
+# Questa Altera Starter FPGA Edition-64 vcom 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 11:04:07 on Jun 03,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/bvu1/Downloads/final_proj/InstructionMemory.vhd 
+# ** Note: (vcom-220) 'modelsim.ini' is used as the ini file.
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity InstructionMemory
+# -- Compiling architecture Behavioral of InstructionMemory
+# End time: 11:04:07 on Jun 03,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/bvu1/Downloads/final_proj/PC.vhd}
+# Questa Altera Starter FPGA Edition-64 vcom 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 11:04:07 on Jun 03,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/bvu1/Downloads/final_proj/PC.vhd 
+# ** Note: (vcom-220) 'modelsim.ini' is used as the ini file.
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity PC
+# -- Compiling architecture Behavioral of PC
+# End time: 11:04:07 on Jun 03,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/bvu1/Downloads/final_proj/Processor.vhd}
+# Questa Altera Starter FPGA Edition-64 vcom 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 11:04:07 on Jun 03,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/bvu1/Downloads/final_proj/Processor.vhd 
+# ** Note: (vcom-220) 'modelsim.ini' is used as the ini file.
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Processor
+# -- Compiling architecture Behavioral of Processor
+# -- Loading entity PC
+# -- Loading entity InstructionMemory
+# End time: 11:04:08 on Jun 03,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+vsim rtl_work.processor(behavioral)
+# Error while executing: vsim
+# Usage: vsim
+vsim -voptargs=+acc rtl_work.processor(behavioral)
+# ** Note: (vsim-220) 'modelsim.ini' is used as the ini file.
+# vsim -voptargs="+acc" rtl_work.processor(behavioral) 
+# Start time: 11:06:46 on Jun 03,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'modelsim.ini' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.processor(behavioral)#1
+# Loading work.pc(behavioral)#1
+# Loading work.instructionmemory(behavioral)#1
+view -new wave
+# .main_pane.wave1.interior.cs.body.pw.wf
+add wave -position insertpoint  \
+sim:/processor/ReadData1
+add wave -position insertpoint  \
+sim:/processor/clk
+add wave -position insertpoint sim:/processor/*
+pwd
+# C:/Users/bvu1/Downloads/final_proj/simulation/questa
+do pc.do
+# symbolic
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /processor/IMEM
+do pc.do
+# hexadecimal
+do pc.do
+# hexadecimal
+delte wave *
+# invalid command name "delte"
+delete wave *
+add wave -position insertpoint sim:/processor/*
+wave referesh
+# unknown or ambiguous subcommand "referesh": must be activecursor, add, addcursor, clipboard, collapse, configcursor, create, cursor, cursorconfig, cursortime, deletecursor, edit, editwrite, expand, export, exportvcd, group, guiObjGetUPFInfo, guiObjHasUPFInfo, import, interrupt, map, modify, overlay, pah, positioncursor, refresh, seecursor, seetime, sort, ungroup, write, zoom, zoomcursor, zoomfull, zoomin, zoomlast, zoomout, or zoomrange
+wave refwave refresh
+# unknown or ambiguous subcommand "refwave": must be activecursor, add, addcursor, clipboard, collapse, configcursor, create, cursor, cursorconfig, cursortime, deletecursor, edit, editwrite, expand, export, exportvcd, group, guiObjGetUPFInfo, guiObjHasUPFInfo, import, interrupt, map, modify, overlay, pah, positioncursor, refresh, seecursor, seetime, sort, ungroup, write, zoom, zoomcursor, zoomfull, zoomin, zoomlast, zoomout, or zoomrange
+wave refresh 
+restart -force
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+do pc.do
+# hexadecimal
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /processor/IMEM
