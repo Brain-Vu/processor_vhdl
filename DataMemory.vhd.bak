@@ -1,0 +1,8 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+entity DataMemory is
+Port(
+clk : in STD_LOGIC;
+reset : in STD_LOGIC
+);
+end DataMemory;
