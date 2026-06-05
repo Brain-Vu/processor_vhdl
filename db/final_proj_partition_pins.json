@@ -2,7 +2,264 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "instruction_o[0]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_o[1]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_o[2]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_o[3]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_o[4]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_o[5]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_o[6]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_o[7]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_o[8]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_o[9]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_o[10]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_o[11]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_o[12]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_o[13]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_o[14]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_o[15]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_o[16]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_o[17]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_o[18]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_o[19]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_o[20]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_o[21]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_o[22]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_o[23]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_o[24]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_o[25]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_o[26]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_o[27]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_o[28]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_o[29]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_o[30]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_o[31]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_t[12]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_t[23]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_t[26]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_t[28]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_t[25]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_t[31]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_t[21]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_t[27]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_t[30]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_t[24]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_t[29]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_t[5]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_t[22]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_t[10]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_t[0]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_t[13]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_t[6]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_t[11]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_t[1]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_t[14]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_t[7]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_t[2]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_t[15]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_t[8]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_t[3]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_t[16]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_t[9]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_t[4]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_t[17]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_t[18]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_t[19]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction_t[20]",
+					"strict" : false
+				}
+			]
 		}
 	]
 }

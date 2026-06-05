@@ -5,7 +5,11 @@ use IEEE.NUMERIC_STD.ALL;
 entity Processor is
     Port(
         clk   : in  STD_LOGIC;
-        reset : in  STD_LOGIC
+        reset : in  STD_LOGIC;
+		  
+		  instruction_t : in std_logic_vector(31 downto 0);
+		  instruction_o : out std_logic_vector(31 downto 0)
+
     );
 end Processor;
 
@@ -51,13 +55,17 @@ begin
     -- Register File
     ---------------------------------------------------
 
-    -- ADD YOUR REGISTER FILE HERE
+
 
     ---------------------------------------------------
     -- Immediate Generator
     ---------------------------------------------------
 
-    -- ADD YOUR IMMEDIATE GENERATOR HERE
+	IGEN : entity work.ImmediateGenerator
+		port map(
+			Instruction_GEN => instruction_t, 
+			Immout => instruction_o
+		);
 
     ---------------------------------------------------
     -- ALU

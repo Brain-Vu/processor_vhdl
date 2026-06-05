@@ -1,8 +1,10 @@
 m255
 K4
 z2
-!s12c _opt1
+!s12c _opt2
 Z0 !s99 nomlopt
+!s12c _opt1
+R0
 !s12c _opt
 R0
 !s11e vcom 2025.2 2025.05, May 31 2025
@@ -35,7 +37,7 @@ T_opt1
 !i144 0
 !s110 1780510007
 V_k:GAfRJ^=d_U3@a1AlA^0
-04 9 10 work processor behavioral 1
+Z8 04 9 10 work processor behavioral 1
 =1-6c9466a425ef-6a206d36-2ff-2728
 R0
 R2
@@ -46,134 +48,195 @@ o-quiet -auto_acc_if_foreign -work rtl_work +acc
 R6
 n@_opt1
 R7
+R1
+T_opt2
+!i145 1
+!i144 0
+!s110 1780678427
+VCW7O;QVOlI6P_Qj<T>]j41
+R8
+=1-6c9466a425ef-6a22ff19-384-6ca8
+R0
+R2
+R3
+!s124 OEM10U4 
+R5
+o-quiet -auto_acc_if_foreign -work work +acc
+R6
+n@_opt2
+R7
+Eimmediategenerator
+Z9 w1780678354
+Z10 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z11 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z12 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 2
+R1
+Z13 8C:/Users/bvu1/Downloads/final_proj/ImmediateGenerator.vhd
+Z14 FC:/Users/bvu1/Downloads/final_proj/ImmediateGenerator.vhd
+l0
+L5 1
+VzKk<75V>MCTW:bMfl^DgE2
+!s100 jnB>6N:D_VW5D6TfIi[`n0
+Z15 OL;C;2025.2;82
+31
+Z16 !s110 1780678385
+!i10b 1
+Z17 !s108 1780678384.000000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/bvu1/Downloads/final_proj/ImmediateGenerator.vhd|
+Z19 !s107 C:/Users/bvu1/Downloads/final_proj/ImmediateGenerator.vhd|
+!i113 0
+Z20 o-93 -work work
+Z21 tExplicit 1 CvgOpt 0 defaultOptions 1083072464
+Abehavioral
+R10
+R11
+R12
+Z22 DEx4 work 18 immediategenerator 0 22 zKk<75V>MCTW:bMfl^DgE2
+!i122 2
+l13
+L12 45
+VA=m8:Rm2_i2J>1HD=bk:11
+!s100 4cTm97MjZFZ;<fH;QJBjb3
+R15
+31
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 0
+R20
+R21
 Einstructionmemory
-Z8 w1780335376
-Z9 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
-Z10 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z11 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z23 w1780335376
+R10
+R11
+R12
 !i122 0
 R1
-Z12 8C:/Users/bvu1/Downloads/final_proj/InstructionMemory.vhd
-Z13 FC:/Users/bvu1/Downloads/final_proj/InstructionMemory.vhd
+Z24 8C:/Users/bvu1/Downloads/final_proj/InstructionMemory.vhd
+Z25 FC:/Users/bvu1/Downloads/final_proj/InstructionMemory.vhd
 l0
 L5 1
 V;aBO:KMZU[K]=6=4c]D:`2
 !s100 i_KhIG6G0eRD@S9cVBjg21
-Z14 OL;C;2025.2;82
+R15
 31
-Z15 !s110 1780509847
+Z26 !s110 1780678384
 !i10b 1
-Z16 !s108 1780509847.000000
-Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/bvu1/Downloads/final_proj/InstructionMemory.vhd|
-Z18 !s107 C:/Users/bvu1/Downloads/final_proj/InstructionMemory.vhd|
+Z27 !s108 1780678383.000000
+Z28 !s90 -reportprogress|300|-93|-work|work|C:/Users/bvu1/Downloads/final_proj/InstructionMemory.vhd|
+Z29 !s107 C:/Users/bvu1/Downloads/final_proj/InstructionMemory.vhd|
 !i113 0
-Z19 o-93 -work work
-Z20 tExplicit 1 CvgOpt 0 defaultOptions 1083072464
+R20
+R21
 Abehavioral
-R9
 R10
 R11
-Z21 DEx4 work 17 instructionmemory 0 22 ;aBO:KMZU[K]=6=4c]D:`2
+R12
+Z30 DEx4 work 17 instructionmemory 0 22 ;aBO:KMZU[K]=6=4c]D:`2
 !i122 0
 l54
 L12 49
 Vg;EPl5=_3^eoY7jHYb7Xd2
 !s100 B<?`7A:jVR]mL:^jz=nz?1
-R14
-31
 R15
+31
+R26
 !i10b 1
-R16
-R17
-R18
+R27
+R28
+R29
 !i113 0
-R19
 R20
+R21
 Epc
-Z22 w1780341701
-R9
+Z31 w1780341701
 R10
 R11
+R12
 !i122 1
 R1
-Z23 8C:/Users/bvu1/Downloads/final_proj/PC.vhd
-Z24 FC:/Users/bvu1/Downloads/final_proj/PC.vhd
+Z32 8C:/Users/bvu1/Downloads/final_proj/PC.vhd
+Z33 FC:/Users/bvu1/Downloads/final_proj/PC.vhd
 l0
 L5 1
 Vff7]C>33[P4@a?folhJM:1
 !s100 KiW41`ALhJfC]U[aS>`jR3
-R14
-31
 R15
+31
+R26
 !i10b 1
-R16
-Z25 !s90 -reportprogress|300|-93|-work|work|C:/Users/bvu1/Downloads/final_proj/PC.vhd|
-Z26 !s107 C:/Users/bvu1/Downloads/final_proj/PC.vhd|
+R17
+Z34 !s90 -reportprogress|300|-93|-work|work|C:/Users/bvu1/Downloads/final_proj/PC.vhd|
+Z35 !s107 C:/Users/bvu1/Downloads/final_proj/PC.vhd|
 !i113 0
-R19
 R20
+R21
 Abehavioral
-R9
 R10
 R11
-Z27 DEx4 work 2 pc 0 22 ff7]C>33[P4@a?folhJM:1
+R12
+Z36 DEx4 work 2 pc 0 22 ff7]C>33[P4@a?folhJM:1
 !i122 1
 l18
 L14 27
 Vo4;;69WU67_@WD6:674hC1
 !s100 m[S0ma@a5m`1Un4zBZZUT3
-R14
-31
 R15
-!i10b 1
-R16
-R25
+31
 R26
+!i10b 1
+R17
+R34
+R35
 !i113 0
-R19
 R20
+R21
 Eprocessor
-Z28 w1780341731
-R9
+Z37 w1780678293
 R10
 R11
-!i122 2
+R12
+!i122 3
 R1
-Z29 8C:/Users/bvu1/Downloads/final_proj/Processor.vhd
-Z30 FC:/Users/bvu1/Downloads/final_proj/Processor.vhd
+Z38 8C:/Users/bvu1/Downloads/final_proj/Processor.vhd
+Z39 FC:/Users/bvu1/Downloads/final_proj/Processor.vhd
 l0
 L5 1
-V8eHM]9PU=DD^F;Aa4hV2@0
-!s100 ihaTz2g]lh[BVR>GLl1@H1
-R14
+VN`_?_Q:6[C=IdRMY[hWdW2
+!s100 dF_A;<XB@OGD@5^Skak9M3
+R15
 31
-Z31 !s110 1780509848
-!i10b 1
 R16
-Z32 !s90 -reportprogress|300|-93|-work|work|C:/Users/bvu1/Downloads/final_proj/Processor.vhd|
-Z33 !s107 C:/Users/bvu1/Downloads/final_proj/Processor.vhd|
+!i10b 1
+Z40 !s108 1780678385.000000
+Z41 !s90 -reportprogress|300|-93|-work|work|C:/Users/bvu1/Downloads/final_proj/Processor.vhd|
+Z42 !s107 C:/Users/bvu1/Downloads/final_proj/Processor.vhd|
 !i113 0
-R19
 R20
-Abehavioral
 R21
-R27
-R9
+Abehavioral
+R22
+R30
+R36
 R10
 R11
-DEx4 work 9 processor 0 22 8eHM]9PU=DD^F;Aa4hV2@0
-!i122 2
-l26
-L12 69
-V1j3zX7_:`]VBh5DDe8h5M1
-!s100 l7WfhUje4^j;zU13:Y8Xf0
-R14
+R12
+DEx4 work 9 processor 0 22 N`_?_Q:6[C=IdRMY[hWdW2
+!i122 3
+l30
+L16 73
+V@2_1mPaNGfo8T7kcQL0[k3
+!s100 80]6l=>Ye9H[W:[i_G47d2
+R15
 31
-R31
-!i10b 1
 R16
-R32
-R33
+!i10b 1
+R40
+R41
+R42
 !i113 0
-R19
 R20
+R21

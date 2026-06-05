@@ -1,5 +1,5 @@
 Analysis & Synthesis report for final_proj
-Wed Jun  3 11:03:36 2026
+Fri Jun  5 09:52:46 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -14,9 +14,10 @@ Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -43,14 +44,14 @@ on the Quartus Prime software download page.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Jun  3 11:03:36 2026           ;
+; Analysis & Synthesis Status     ; Successful - Fri Jun  5 09:52:46 2026           ;
 ; Quartus Prime Version           ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
 ; Revision Name                   ; final_proj                                      ;
 ; Top-level Entity Name           ; Processor                                       ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
 ; Total registers                 ; 0                                               ;
-; Total pins                      ; 2                                               ;
+; Total pins                      ; 66                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
 ; Total DSP Blocks                ; 0                                               ;
@@ -166,51 +167,53 @@ on the Quartus Prime software download page.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                    ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                             ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
-; InstructionMemory.vhd            ; yes             ; User VHDL File  ; C:/Users/bvu1/Downloads/final_proj/InstructionMemory.vhd ;         ;
-; Processor.vhd                    ; yes             ; User VHDL File  ; C:/Users/bvu1/Downloads/final_proj/Processor.vhd         ;         ;
-; PC.vhd                           ; yes             ; User VHDL File  ; C:/Users/bvu1/Downloads/final_proj/PC.vhd                ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                     ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                              ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------+---------+
+; InstructionMemory.vhd            ; yes             ; User VHDL File  ; C:/Users/bvu1/Downloads/final_proj/InstructionMemory.vhd  ;         ;
+; Processor.vhd                    ; yes             ; User VHDL File  ; C:/Users/bvu1/Downloads/final_proj/Processor.vhd          ;         ;
+; PC.vhd                           ; yes             ; User VHDL File  ; C:/Users/bvu1/Downloads/final_proj/PC.vhd                 ;         ;
+; ImmediateGenerator.vhd           ; yes             ; User VHDL File  ; C:/Users/bvu1/Downloads/final_proj/ImmediateGenerator.vhd ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimate of Logic utilization (ALMs needed) ; 0     ;
-;                                             ;       ;
-; Combinational ALUT usage for logic          ; 0     ;
-;     -- 7 input functions                    ; 0     ;
-;     -- 6 input functions                    ; 0     ;
-;     -- 5 input functions                    ; 0     ;
-;     -- 4 input functions                    ; 0     ;
-;     -- <=3 input functions                  ; 0     ;
-;                                             ;       ;
-; Dedicated logic registers                   ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 2     ;
-;                                             ;       ;
-; Total DSP Blocks                            ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 2     ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
++--------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                    ;
++---------------------------------------------+----------------------------------+
+; Resource                                    ; Usage                            ;
++---------------------------------------------+----------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 49                               ;
+;                                             ;                                  ;
+; Combinational ALUT usage for logic          ; 63                               ;
+;     -- 7 input functions                    ; 0                                ;
+;     -- 6 input functions                    ; 34                               ;
+;     -- 5 input functions                    ; 21                               ;
+;     -- 4 input functions                    ; 2                                ;
+;     -- <=3 input functions                  ; 6                                ;
+;                                             ;                                  ;
+; Dedicated logic registers                   ; 0                                ;
+;                                             ;                                  ;
+; I/O pins                                    ; 66                               ;
+;                                             ;                                  ;
+; Total DSP Blocks                            ; 0                                ;
+;                                             ;                                  ;
+; Maximum fan-out node                        ; ImmediateGenerator:IGEN|Equal1~0 ;
+; Maximum fan-out                             ; 27                               ;
+; Total fan-out                               ; 428                              ;
+; Average fan-out                             ; 2.19                             ;
++---------------------------------------------+----------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |Processor                 ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 2    ; 0            ; |Processor          ; Processor   ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                            ;
++------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Entity Name        ; Library Name ;
++------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+--------------------+--------------+
+; |Processor                   ; 63 (0)              ; 0 (0)                     ; 0                 ; 0          ; 66   ; 0            ; |Processor                         ; Processor          ; work         ;
+;    |ImmediateGenerator:IGEN| ; 63 (63)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Processor|ImmediateGenerator:IGEN ; ImmediateGenerator ; work         ;
++------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -229,16 +232,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; 5:1                ; 20 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |Processor|ImmediateGenerator:IGEN|ImmOut[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
-+-------------------+---------------------------------+
-; Type              ; Count                           ;
-+-------------------+---------------------------------+
-; boundary_port     ; 2                               ;
-;                   ;                                 ;
-; Max LUT depth     ; 0.00                            ;
-; Average LUT depth ; 0.00                            ;
-+-------------------+---------------------------------+
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 63                          ;
+;     normal            ; 63                          ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 2                           ;
+;         5 data inputs ; 21                          ;
+;         6 data inputs ; 34                          ;
+; boundary_port         ; 66                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 2.78                        ;
++-----------------------+-----------------------------+
 
 
 +-------------------------------+
@@ -256,7 +275,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Wed Jun  3 11:03:28 2026
+    Info: Processing started: Fri Jun  5 09:52:37 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off final_proj -c final_proj
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -264,35 +283,38 @@ Info (12021): Found 2 design units, including 1 entities, in source file instruc
     Info (12022): Found design unit 1: InstructionMemory-Behavioral File: C:/Users/bvu1/Downloads/final_proj/InstructionMemory.vhd Line: 12
     Info (12023): Found entity 1: InstructionMemory File: C:/Users/bvu1/Downloads/final_proj/InstructionMemory.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file processor.vhd
-    Info (12022): Found design unit 1: Processor-Behavioral File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 12
+    Info (12022): Found design unit 1: Processor-Behavioral File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 16
     Info (12023): Found entity 1: Processor File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file tprocessor.vhd
-    Info (12022): Found design unit 1: tProcessor-Behavioral File: C:/Users/bvu1/Downloads/final_proj/tProcessor.vhd Line: 11
-    Info (12023): Found entity 1: tProcessor File: C:/Users/bvu1/Downloads/final_proj/tProcessor.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file registerfile.vhd
-    Info (12022): Found design unit 1: RegisterFile-Regs File: C:/Users/bvu1/Downloads/final_proj/RegisterFile.vhd Line: 13
-    Info (12023): Found entity 1: RegisterFile File: C:/Users/bvu1/Downloads/final_proj/RegisterFile.vhd Line: 5
+    Info (12022): Found design unit 1: RegisterFile-remember File: C:/Users/bvu1/Downloads/final_proj/RegisterFile.vhd Line: 18
+    Info (12023): Found entity 1: RegisterFile File: C:/Users/bvu1/Downloads/final_proj/RegisterFile.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file pc.vhd
     Info (12022): Found design unit 1: PC-Behavioral File: C:/Users/bvu1/Downloads/final_proj/PC.vhd Line: 14
     Info (12023): Found entity 1: PC File: C:/Users/bvu1/Downloads/final_proj/PC.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file immediategenerator.vhd
+    Info (12022): Found design unit 1: ImmediateGenerator-Behavioral File: C:/Users/bvu1/Downloads/final_proj/ImmediateGenerator.vhd Line: 12
+    Info (12023): Found entity 1: ImmediateGenerator File: C:/Users/bvu1/Downloads/final_proj/ImmediateGenerator.vhd Line: 5
 Info (12127): Elaborating entity "Processor" for the top level hierarchy
-Info (12128): Elaborating entity "PC" for hierarchy "PC:IPC" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 32
+Info (12128): Elaborating entity "PC" for hierarchy "PC:IPC" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 36
 Warning (10631): VHDL Process Statement warning at PC.vhd(22): inferring latch(es) for signal or variable "PC_reg", which holds its previous value in one or more paths through the process File: C:/Users/bvu1/Downloads/final_proj/PC.vhd Line: 22
 Info (10041): Inferred latch for "PC_reg[0]" at PC.vhd(22) File: C:/Users/bvu1/Downloads/final_proj/PC.vhd Line: 22
 Info (10041): Inferred latch for "PC_reg[1]" at PC.vhd(22) File: C:/Users/bvu1/Downloads/final_proj/PC.vhd Line: 22
-Info (12128): Elaborating entity "InstructionMemory" for hierarchy "InstructionMemory:IMEM" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 44
+Info (12128): Elaborating entity "InstructionMemory" for hierarchy "InstructionMemory:IMEM" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 48
+Info (12128): Elaborating entity "ImmediateGenerator" for hierarchy "ImmediateGenerator:IGEN" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 64
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "clk" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 7
     Warning (15610): No output dependent on input pin "reset" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 8
-Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 0 output pins
+Info (21057): Implemented 129 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 34 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 63 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4915 megabytes
-    Info: Processing ended: Wed Jun  3 11:03:36 2026
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Peak virtual memory: 4956 megabytes
+    Info: Processing ended: Fri Jun  5 09:52:46 2026
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:24
 
 

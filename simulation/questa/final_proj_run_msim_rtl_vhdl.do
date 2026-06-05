@@ -7,5 +7,6 @@ vmap work rtl_work
 
 vcom -93 -work work {C:/Users/bvu1/Downloads/final_proj/InstructionMemory.vhd}
 vcom -93 -work work {C:/Users/bvu1/Downloads/final_proj/PC.vhd}
+vcom -93 -work work {C:/Users/bvu1/Downloads/final_proj/ImmediateGenerator.vhd}
 vcom -93 -work work {C:/Users/bvu1/Downloads/final_proj/Processor.vhd}
 
