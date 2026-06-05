@@ -1,0 +1,23 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity ALU is
+	port (a, b, cin : in std_logic;
+			s, c, d, b0, sF, cF, dF, b0F : out std_logic);
+end;
+
+architecture behavior of ALU is
+begin
+	s <= a xor b;
+	c <= a and b;
+	d <= a xor b;
+	b0 <= not a and b;
+	
+	sF <= (a xor b) xor cin;
+	cF <= (a and b) or (cin and (a xor b));
+	
+	dF <= cin xor (a xor b);
+	b0F <= (cin and not (a xor b)) or (not a and b);
+end;
+
+
