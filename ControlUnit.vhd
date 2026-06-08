@@ -1,0 +1,115 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity ControlUnit is
+    port(
+        opcode     : in  std_logic_vector(10 downto 0);
+        RegWrite   : out std_logic;
+        ALUSrc     : out std_logic;
+        MemRead    : out std_logic;
+        MemWrite   : out std_logic;
+        MemtoReg   : out std_logic;
+        Branch     : out std_logic;
+        ALUControl : out std_logic_vector(3 downto 0)
+    );
+end ControlUnit;
+
+architecture Behavioral of ControlUnit is
+begin
+    process(opcode)
+    begin
+        case opcode is
+
+            when "10001011000" => --ADD
+                RegWrite   <= '1';
+                ALUSrc     <= '0';
+                MemRead    <= '0';
+                MemWrite   <= '0';
+                MemtoReg   <= '0';
+                Branch     <= '0';
+                ALUControl <= "0010";
+
+            when "11001011000" => --SUB
+                RegWrite   <= '1';
+                ALUSrc     <= '0';
+                MemRead    <= '0';
+                MemWrite   <= '0';
+                MemtoReg   <= '0';
+                Branch     <= '0';
+                ALUControl <= "0110";
+
+            when "10001010000" => --AND
+                RegWrite   <= '1';
+                ALUSrc     <= '0';
+                MemRead    <= '0';
+                MemWrite   <= '0';
+                MemtoReg   <= '0';
+                Branch     <= '0';
+                ALUControl <= "0000";
+
+            when "10101010000" => --ORR
+                RegWrite   <= '1';
+                ALUSrc     <= '0';
+                MemRead    <= '0';
+                MemWrite   <= '0';
+                MemtoReg   <= '0';
+                Branch     <= '0';
+                ALUControl <= "0001";
+
+            when "10010001000" => --ADDI
+                RegWrite   <= '1';
+                ALUSrc     <= '1';
+                MemRead    <= '0';
+                MemWrite   <= '0';
+                MemtoReg   <= '0';
+                Branch     <= '0';
+                ALUControl <= "0010";
+
+            when "11111000010" => --LDUR
+                RegWrite   <= '1';
+                ALUSrc     <= '1';
+                MemRead    <= '1';
+                MemWrite   <= '0';
+                MemtoReg   <= '1';
+                Branch     <= '0';
+                ALUControl <= "0010";
+
+            when "11111000000" => --STUR
+                RegWrite   <= '0';
+                ALUSrc     <= '1';
+                MemRead    <= '0';
+                MemWrite   <= '1';
+                MemtoReg   <= '0';
+                Branch     <= '0';
+                ALUControl <= "0010";
+
+            when "10110100000" => --CBZ
+                RegWrite   <= '0';
+                ALUSrc     <= '0';
+                MemRead    <= '0';
+                MemWrite   <= '0';
+                MemtoReg   <= '0';
+                Branch     <= '1';
+                ALUControl <= "0110";
+
+            when "00010100000" => --B
+                RegWrite   <= '0';
+                ALUSrc     <= '0';
+                MemRead    <= '0';
+                MemWrite   <= '0';
+                MemtoReg   <= '0';
+                Branch     <= '1';
+                ALUControl <= "0010";
+
+            when others => --default
+                RegWrite   <= '0';
+                ALUSrc     <= '0';
+                MemRead    <= '0';
+                MemWrite   <= '0';
+                MemtoReg   <= '0';
+                Branch     <= '0';
+                ALUControl <= "0000";
+
+        end case;
+    end process;
+end Behavioral;
