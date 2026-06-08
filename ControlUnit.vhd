@@ -10,7 +10,8 @@ entity ControlUnit is
         MemWrite   : out std_logic;
         MemtoReg   : out std_logic;
         Branch     : out std_logic;
-        ALUControl : out std_logic_vector(3 downto 0)
+        ALUControl : out std_logic_vector(3 downto 0);
+		  CmdTypeR 	 : out std_logic
     );
 end ControlUnit;
 
@@ -28,6 +29,7 @@ begin
                 MemtoReg   <= '0';
                 Branch     <= '0';
                 ALUControl <= "0010";
+					 CmdTypeR    <= '1';
 
             when "11001011000" => --SUB
                 RegWrite   <= '1';
@@ -37,6 +39,7 @@ begin
                 MemtoReg   <= '0';
                 Branch     <= '0';
                 ALUControl <= "0110";
+					 CmdTypeR    <= '1';
 
             when "10001010000" => --AND
                 RegWrite   <= '1';
@@ -46,6 +49,7 @@ begin
                 MemtoReg   <= '0';
                 Branch     <= '0';
                 ALUControl <= "0000";
+					 CmdTypeR    <= '1';
 
             when "10101010000" => --ORR
                 RegWrite   <= '1';
@@ -55,6 +59,7 @@ begin
                 MemtoReg   <= '0';
                 Branch     <= '0';
                 ALUControl <= "0001";
+					 CmdTypeR    <= '1';
 
             when "10010001000" => --ADDI
                 RegWrite   <= '1';
@@ -63,6 +68,7 @@ begin
                 MemWrite   <= '0';
                 MemtoReg   <= '0';
                 Branch     <= '0';
+					 CmdTypeR    <= '1';
                 ALUControl <= "0010";
 
             when "11111000010" => --LDUR
@@ -73,6 +79,7 @@ begin
                 MemtoReg   <= '1';
                 Branch     <= '0';
                 ALUControl <= "0010";
+					 CmdTypeR    <= '0';
 
             when "11111000000" => --STUR
                 RegWrite   <= '0';
@@ -82,6 +89,7 @@ begin
                 MemtoReg   <= '0';
                 Branch     <= '0';
                 ALUControl <= "0010";
+					 CmdTypeR    <= '0';
 
             when "10110100000" => --CBZ
                 RegWrite   <= '0';
@@ -91,6 +99,7 @@ begin
                 MemtoReg   <= '0';
                 Branch     <= '1';
                 ALUControl <= "0110";
+					 CmdTypeR    <= '0';
 
             when "00010100000" => --B
                 RegWrite   <= '0';
@@ -100,6 +109,7 @@ begin
                 MemtoReg   <= '0';
                 Branch     <= '1';
                 ALUControl <= "0010";
+					 CmdTypeR    <= '0';
 
             when others => --default
                 RegWrite   <= '0';
@@ -109,6 +119,7 @@ begin
                 MemtoReg   <= '0';
                 Branch     <= '0';
                 ALUControl <= "0000";
+					 CmdTypeR    <= '0';
 
         end case;
     end process;

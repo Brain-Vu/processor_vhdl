@@ -6,7 +6,7 @@ entity ALU is
     port (
         operandA   : in  std_logic_vector(31 downto 0);
         operandB   : in  std_logic_vector(31 downto 0);
-        ctrl       : in  std_logic_vector(1 downto 0);
+        ctrl       : in  std_logic_vector(3 downto 0);
 
         result_ALU : out std_logic_vector(31 downto 0);
         zero_flag  : out std_logic
@@ -21,13 +21,13 @@ begin
     begin
 
         case ctrl is
-            when "00" =>
+            when "0010" =>
                 result_v := std_logic_vector(unsigned(operandA) + unsigned(operandB));
 
-            when "01" =>
+            when "0110" =>
                 result_v := std_logic_vector(unsigned(operandA) - unsigned(operandB));
 
-            when "10" =>
+            when "0000" =>
                 result_v := operandA and operandB;
 
             when others =>

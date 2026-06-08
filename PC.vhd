@@ -6,7 +6,7 @@ entity PC is
     Port(
         clk_PC         : in  STD_LOGIC;
         reset_PC       : in  STD_LOGIC;
-        instruction_PC : in  STD_LOGIC_VECTOR(31 downto 0);
+		  branch_PC		  : in  STD_LOGIC;
         PC_Out      : out STD_LOGIC_VECTOR(31 downto 0)
     );
 end PC;
@@ -26,8 +26,8 @@ begin
             PC_reg <= (others => '0');
 
         elsif rising_edge(clk_PC) then
-
-            if instruction_PC = x"14000002" then
+				
+            if branch_PC = '1' then
                 PC_reg <= std_logic_vector(unsigned(PC_reg) + 8);
             else
                 PC_reg <= std_logic_vector(unsigned(PC_reg) + 4);

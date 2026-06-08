@@ -1,5 +1,5 @@
 Analysis & Synthesis report for final_proj
-Fri Jun  5 12:19:06 2026
+Mon Jun  8 15:06:29 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -15,10 +15,9 @@ Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
   9. Port Connectivity Checks: "ALU:IALU"
- 10. Port Connectivity Checks: "ImmediateGenerator:IGEN"
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -45,14 +44,14 @@ on the Quartus Prime software download page.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Jun  5 12:19:06 2026           ;
+; Analysis & Synthesis Status     ; Successful - Mon Jun  8 15:06:29 2026           ;
 ; Quartus Prime Version           ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
 ; Revision Name                   ; final_proj                                      ;
 ; Top-level Entity Name           ; Processor                                       ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
 ; Total registers                 ; 0                                               ;
-; Total pins                      ; 68                                              ;
+; Total pins                      ; 2                                               ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
 ; Total DSP Blocks                ; 0                                               ;
@@ -173,11 +172,15 @@ on the Quartus Prime software download page.
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                              ; Library ;
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------+---------+
+; ControlUnit.vhd                  ; yes             ; User VHDL File  ; C:/Users/bvu1/Downloads/final_proj/ControlUnit.vhd        ;         ;
+; DataMemory.vhd                   ; yes             ; User VHDL File  ; C:/Users/bvu1/Downloads/final_proj/DataMemory.vhd         ;         ;
 ; InstructionMemory.vhd            ; yes             ; User VHDL File  ; C:/Users/bvu1/Downloads/final_proj/InstructionMemory.vhd  ;         ;
 ; Processor.vhd                    ; yes             ; User VHDL File  ; C:/Users/bvu1/Downloads/final_proj/Processor.vhd          ;         ;
+; RegisterFile.vhd                 ; yes             ; User VHDL File  ; C:/Users/bvu1/Downloads/final_proj/RegisterFile.vhd       ;         ;
 ; PC.vhd                           ; yes             ; User VHDL File  ; C:/Users/bvu1/Downloads/final_proj/PC.vhd                 ;         ;
 ; ImmediateGenerator.vhd           ; yes             ; User VHDL File  ; C:/Users/bvu1/Downloads/final_proj/ImmediateGenerator.vhd ;         ;
 ; ALU.vhd                          ; yes             ; User VHDL File  ; C:/Users/bvu1/Downloads/final_proj/ALU.vhd                ;         ;
+; Mux.vhd                          ; yes             ; User VHDL File  ; C:/Users/bvu1/Downloads/final_proj/Mux.vhd                ;         ;
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------+---------+
 
 
@@ -197,13 +200,13 @@ on the Quartus Prime software download page.
 ;                                             ;       ;
 ; Dedicated logic registers                   ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 68    ;
+; I/O pins                                    ; 2     ;
 ;                                             ;       ;
 ; Total DSP Blocks                            ; 0     ;
 ;                                             ;       ;
 ; Maximum fan-out node                        ; clk   ;
 ; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 68    ;
+; Total fan-out                               ; 2     ;
 ; Average fan-out                             ; 0.50  ;
 +---------------------------------------------+-------+
 
@@ -213,7 +216,7 @@ on the Quartus Prime software download page.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |Processor                 ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 68   ; 0            ; |Processor          ; Processor   ; work         ;
+; |Processor                 ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 2    ; 0            ; |Processor          ; Processor   ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -233,23 +236,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:IALU"                                                                                 ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                             ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; result_alu ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; zero_flag  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ImmediateGenerator:IGEN"                                                              ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; immout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:IALU"                                                                                ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; zero_flag ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -257,7 +250,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------+---------------------------------+
 ; Type              ; Count                           ;
 +-------------------+---------------------------------+
-; boundary_port     ; 68                              ;
+; boundary_port     ; 2                               ;
 ;                   ;                                 ;
 ; Max LUT depth     ; 0.00                            ;
 ; Average LUT depth ; 0.00                            ;
@@ -279,22 +272,34 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Fri Jun  5 12:18:59 2026
+    Info: Processing started: Mon Jun  8 15:06:20 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off final_proj -c final_proj
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file bitstorage.vhd
+    Info (12022): Found design unit 1: bitstorage-memlike File: C:/Users/bvu1/Downloads/final_proj/bitstorage.vhd Line: 14
+    Info (12023): Found entity 1: bitstorage File: C:/Users/bvu1/Downloads/final_proj/bitstorage.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file register8.vhd
+    Info (12022): Found design unit 1: register8-memmy File: C:/Users/bvu1/Downloads/final_proj/register8.vhd Line: 14
+    Info (12023): Found entity 1: register8 File: C:/Users/bvu1/Downloads/final_proj/register8.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file controlunit.vhd
+    Info (12022): Found design unit 1: ControlUnit-Behavioral File: C:/Users/bvu1/Downloads/final_proj/ControlUnit.vhd Line: 18
+    Info (12023): Found entity 1: ControlUnit File: C:/Users/bvu1/Downloads/final_proj/ControlUnit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file datamemory.vhd
+    Info (12022): Found design unit 1: DataMemory-staticRAM File: C:/Users/bvu1/Downloads/final_proj/DataMemory.vhd Line: 16
+    Info (12023): Found entity 1: DataMemory File: C:/Users/bvu1/Downloads/final_proj/DataMemory.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file register32.vhd
-    Info (12022): Found design unit 1: register32-biggermem File: C:/Users/bvu1/Downloads/final_proj/register32.vhd Line: 17
+    Info (12022): Found design unit 1: register32-biggermem File: C:/Users/bvu1/Downloads/final_proj/register32.vhd Line: 18
     Info (12023): Found entity 1: register32 File: C:/Users/bvu1/Downloads/final_proj/register32.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file instructionmemory.vhd
     Info (12022): Found design unit 1: InstructionMemory-Behavioral File: C:/Users/bvu1/Downloads/final_proj/InstructionMemory.vhd Line: 12
     Info (12023): Found entity 1: InstructionMemory File: C:/Users/bvu1/Downloads/final_proj/InstructionMemory.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file processor.vhd
-    Info (12022): Found design unit 1: Processor-Behavioral File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 17
+    Info (12022): Found design unit 1: Processor-Behavioral File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 12
     Info (12023): Found entity 1: Processor File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file registerfile.vhd
-    Info (12022): Found design unit 1: RegisterFile-remember File: C:/Users/bvu1/Downloads/final_proj/RegisterFile.vhd Line: 18
-    Info (12023): Found entity 1: RegisterFile File: C:/Users/bvu1/Downloads/final_proj/RegisterFile.vhd Line: 6
+    Info (12022): Found design unit 1: RegisterFile-clean File: C:/Users/bvu1/Downloads/final_proj/RegisterFile.vhd Line: 21
+    Info (12023): Found entity 1: RegisterFile File: C:/Users/bvu1/Downloads/final_proj/RegisterFile.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file pc.vhd
     Info (12022): Found design unit 1: PC-Behavioral File: C:/Users/bvu1/Downloads/final_proj/PC.vhd Line: 14
     Info (12023): Found entity 1: PC File: C:/Users/bvu1/Downloads/final_proj/PC.vhd Line: 5
@@ -304,95 +309,35 @@ Info (12021): Found 2 design units, including 1 entities, in source file immedia
 Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
     Info (12022): Found design unit 1: ALU-behavior File: C:/Users/bvu1/Downloads/final_proj/ALU.vhd Line: 16
     Info (12023): Found entity 1: ALU File: C:/Users/bvu1/Downloads/final_proj/ALU.vhd Line: 5
+Warning (12090): Entity "Mux" obtained from "Mux.vhd" instead of from Quartus Prime megafunction library File: C:/Users/bvu1/Downloads/final_proj/Mux.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mux.vhd
+    Info (12022): Found design unit 1: Mux-Mux File: C:/Users/bvu1/Downloads/final_proj/Mux.vhd Line: 13
+    Info (12023): Found entity 1: Mux File: C:/Users/bvu1/Downloads/final_proj/Mux.vhd Line: 4
 Info (12127): Elaborating entity "Processor" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at Processor.vhd(25): object "Immediate" assigned a value but never read File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 25
-Warning (10036): Verilog HDL or VHDL warning at Processor.vhd(27): object "ALUResult" assigned a value but never read File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 27
-Warning (10036): Verilog HDL or VHDL warning at Processor.vhd(28): object "ALUZeroFlag" assigned a value but never read File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 28
-Info (12128): Elaborating entity "PC" for hierarchy "PC:IPC" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 38
+Warning (10036): Verilog HDL or VHDL warning at Processor.vhd(27): object "ALUZeroFlag" assigned a value but never read File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 27
+Info (12128): Elaborating entity "PC" for hierarchy "PC:IPC" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 73
 Warning (10631): VHDL Process Statement warning at PC.vhd(22): inferring latch(es) for signal or variable "PC_reg", which holds its previous value in one or more paths through the process File: C:/Users/bvu1/Downloads/final_proj/PC.vhd Line: 22
 Info (10041): Inferred latch for "PC_reg[0]" at PC.vhd(22) File: C:/Users/bvu1/Downloads/final_proj/PC.vhd Line: 22
 Info (10041): Inferred latch for "PC_reg[1]" at PC.vhd(22) File: C:/Users/bvu1/Downloads/final_proj/PC.vhd Line: 22
-Info (12128): Elaborating entity "InstructionMemory" for hierarchy "InstructionMemory:IMEM" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 52
-Info (12128): Elaborating entity "ImmediateGenerator" for hierarchy "ImmediateGenerator:IGEN" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 67
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:IALU" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 77
+Info (12128): Elaborating entity "InstructionMemory" for hierarchy "InstructionMemory:IMEM" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 85
+Info (12128): Elaborating entity "RegisterFile" for hierarchy "RegisterFile:IREG" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 95
+Info (12128): Elaborating entity "ImmediateGenerator" for hierarchy "ImmediateGenerator:IGEN" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 111
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:IALU" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 123
+Info (12128): Elaborating entity "DataMemory" for hierarchy "DataMemory:IDAT" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 136
+Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:ICON" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 150
+Info (12128): Elaborating entity "Mux" for hierarchy "Mux:MUXALU" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 167
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 68 input pin(s) that do not drive logic
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "clk" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 7
     Warning (15610): No output dependent on input pin "reset" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 8
-    Warning (15610): No output dependent on input pin "opA_t[0]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 10
-    Warning (15610): No output dependent on input pin "opA_t[1]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 10
-    Warning (15610): No output dependent on input pin "opA_t[2]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 10
-    Warning (15610): No output dependent on input pin "opA_t[3]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 10
-    Warning (15610): No output dependent on input pin "opA_t[4]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 10
-    Warning (15610): No output dependent on input pin "opA_t[5]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 10
-    Warning (15610): No output dependent on input pin "opA_t[6]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 10
-    Warning (15610): No output dependent on input pin "opA_t[7]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 10
-    Warning (15610): No output dependent on input pin "opA_t[8]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 10
-    Warning (15610): No output dependent on input pin "opA_t[9]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 10
-    Warning (15610): No output dependent on input pin "opA_t[10]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 10
-    Warning (15610): No output dependent on input pin "opA_t[11]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 10
-    Warning (15610): No output dependent on input pin "opA_t[12]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 10
-    Warning (15610): No output dependent on input pin "opA_t[13]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 10
-    Warning (15610): No output dependent on input pin "opA_t[14]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 10
-    Warning (15610): No output dependent on input pin "opA_t[15]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 10
-    Warning (15610): No output dependent on input pin "opA_t[16]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 10
-    Warning (15610): No output dependent on input pin "opA_t[17]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 10
-    Warning (15610): No output dependent on input pin "opA_t[18]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 10
-    Warning (15610): No output dependent on input pin "opA_t[19]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 10
-    Warning (15610): No output dependent on input pin "opA_t[20]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 10
-    Warning (15610): No output dependent on input pin "opA_t[21]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 10
-    Warning (15610): No output dependent on input pin "opA_t[22]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 10
-    Warning (15610): No output dependent on input pin "opA_t[23]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 10
-    Warning (15610): No output dependent on input pin "opA_t[24]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 10
-    Warning (15610): No output dependent on input pin "opA_t[25]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 10
-    Warning (15610): No output dependent on input pin "opA_t[26]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 10
-    Warning (15610): No output dependent on input pin "opA_t[27]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 10
-    Warning (15610): No output dependent on input pin "opA_t[28]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 10
-    Warning (15610): No output dependent on input pin "opA_t[29]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 10
-    Warning (15610): No output dependent on input pin "opA_t[30]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 10
-    Warning (15610): No output dependent on input pin "opA_t[31]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 10
-    Warning (15610): No output dependent on input pin "opB_t[0]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 11
-    Warning (15610): No output dependent on input pin "opB_t[1]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 11
-    Warning (15610): No output dependent on input pin "opB_t[2]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 11
-    Warning (15610): No output dependent on input pin "opB_t[3]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 11
-    Warning (15610): No output dependent on input pin "opB_t[4]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 11
-    Warning (15610): No output dependent on input pin "opB_t[5]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 11
-    Warning (15610): No output dependent on input pin "opB_t[6]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 11
-    Warning (15610): No output dependent on input pin "opB_t[7]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 11
-    Warning (15610): No output dependent on input pin "opB_t[8]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 11
-    Warning (15610): No output dependent on input pin "opB_t[9]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 11
-    Warning (15610): No output dependent on input pin "opB_t[10]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 11
-    Warning (15610): No output dependent on input pin "opB_t[11]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 11
-    Warning (15610): No output dependent on input pin "opB_t[12]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 11
-    Warning (15610): No output dependent on input pin "opB_t[13]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 11
-    Warning (15610): No output dependent on input pin "opB_t[14]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 11
-    Warning (15610): No output dependent on input pin "opB_t[15]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 11
-    Warning (15610): No output dependent on input pin "opB_t[16]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 11
-    Warning (15610): No output dependent on input pin "opB_t[17]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 11
-    Warning (15610): No output dependent on input pin "opB_t[18]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 11
-    Warning (15610): No output dependent on input pin "opB_t[19]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 11
-    Warning (15610): No output dependent on input pin "opB_t[20]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 11
-    Warning (15610): No output dependent on input pin "opB_t[21]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 11
-    Warning (15610): No output dependent on input pin "opB_t[22]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 11
-    Warning (15610): No output dependent on input pin "opB_t[23]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 11
-    Warning (15610): No output dependent on input pin "opB_t[24]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 11
-    Warning (15610): No output dependent on input pin "opB_t[25]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 11
-    Warning (15610): No output dependent on input pin "opB_t[26]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 11
-    Warning (15610): No output dependent on input pin "opB_t[27]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 11
-    Warning (15610): No output dependent on input pin "opB_t[28]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 11
-    Warning (15610): No output dependent on input pin "opB_t[29]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 11
-    Warning (15610): No output dependent on input pin "opB_t[30]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 11
-    Warning (15610): No output dependent on input pin "opB_t[31]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 11
-    Warning (15610): No output dependent on input pin "ctrl_t[0]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 12
-    Warning (15610): No output dependent on input pin "ctrl_t[1]" File: C:/Users/bvu1/Downloads/final_proj/Processor.vhd Line: 12
-Info (21057): Implemented 68 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 68 input pins
+Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 74 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
     Info: Peak virtual memory: 4915 megabytes
-    Info: Processing ended: Fri Jun  5 12:19:06 2026
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Processing ended: Mon Jun  8 15:06:29 2026
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:25
 
 

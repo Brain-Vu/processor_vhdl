@@ -1,0 +1,20 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {C:/Users/bvu1/Downloads/final_proj/bitstorage.vhd}
+vcom -93 -work work {C:/Users/bvu1/Downloads/final_proj/register8.vhd}
+vcom -93 -work work {C:/Users/bvu1/Downloads/final_proj/ControlUnit.vhd}
+vcom -93 -work work {C:/Users/bvu1/Downloads/final_proj/DataMemory.vhd}
+vcom -93 -work work {C:/Users/bvu1/Downloads/final_proj/register32.vhd}
+vcom -93 -work work {C:/Users/bvu1/Downloads/final_proj/InstructionMemory.vhd}
+vcom -93 -work work {C:/Users/bvu1/Downloads/final_proj/RegisterFile.vhd}
+vcom -93 -work work {C:/Users/bvu1/Downloads/final_proj/PC.vhd}
+vcom -93 -work work {C:/Users/bvu1/Downloads/final_proj/ImmediateGenerator.vhd}
+vcom -93 -work work {C:/Users/bvu1/Downloads/final_proj/ALU.vhd}
+vcom -93 -work work {C:/Users/bvu1/Downloads/final_proj/Mux.vhd}
+vcom -93 -work work {C:/Users/bvu1/Downloads/final_proj/Processor.vhd}
+

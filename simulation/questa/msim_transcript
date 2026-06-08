@@ -29,9 +29,34 @@
 # Copying c:/altera_lite/25.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
+# vcom -93 -work work {C:/Users/bvu1/Downloads/final_proj/ControlUnit.vhd}
+# Questa Altera Starter FPGA Edition-64 vcom 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 15:06:48 on Jun 08,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/bvu1/Downloads/final_proj/ControlUnit.vhd 
+# ** Note: (vcom-220) 'modelsim.ini' is used as the ini file.
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ControlUnit
+# -- Compiling architecture Behavioral of ControlUnit
+# End time: 15:06:48 on Jun 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/bvu1/Downloads/final_proj/DataMemory.vhd}
+# Questa Altera Starter FPGA Edition-64 vcom 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 15:06:49 on Jun 08,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/bvu1/Downloads/final_proj/DataMemory.vhd 
+# ** Note: (vcom-220) 'modelsim.ini' is used as the ini file.
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity DataMemory
+# -- Compiling architecture staticRAM of DataMemory
+# End time: 15:06:49 on Jun 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/bvu1/Downloads/final_proj/InstructionMemory.vhd}
 # Questa Altera Starter FPGA Edition-64 vcom 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 12:19:27 on Jun 05,2026
+# Start time: 15:06:49 on Jun 08,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/bvu1/Downloads/final_proj/InstructionMemory.vhd 
 # ** Note: (vcom-220) 'modelsim.ini' is used as the ini file.
 # -- Loading package STANDARD
@@ -40,11 +65,24 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity InstructionMemory
 # -- Compiling architecture Behavioral of InstructionMemory
-# End time: 12:19:27 on Jun 05,2026, Elapsed time: 0:00:00
+# End time: 15:06:49 on Jun 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/bvu1/Downloads/final_proj/RegisterFile.vhd}
+# Questa Altera Starter FPGA Edition-64 vcom 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 15:06:50 on Jun 08,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/bvu1/Downloads/final_proj/RegisterFile.vhd 
+# ** Note: (vcom-220) 'modelsim.ini' is used as the ini file.
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RegisterFile
+# -- Compiling architecture clean of RegisterFile
+# End time: 15:06:50 on Jun 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/bvu1/Downloads/final_proj/PC.vhd}
 # Questa Altera Starter FPGA Edition-64 vcom 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 12:19:27 on Jun 05,2026
+# Start time: 15:06:50 on Jun 08,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/bvu1/Downloads/final_proj/PC.vhd 
 # ** Note: (vcom-220) 'modelsim.ini' is used as the ini file.
 # -- Loading package STANDARD
@@ -53,11 +91,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity PC
 # -- Compiling architecture Behavioral of PC
-# End time: 12:19:27 on Jun 05,2026, Elapsed time: 0:00:00
+# End time: 15:06:50 on Jun 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/bvu1/Downloads/final_proj/ImmediateGenerator.vhd}
 # Questa Altera Starter FPGA Edition-64 vcom 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 12:19:29 on Jun 05,2026
+# Start time: 15:06:50 on Jun 08,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/bvu1/Downloads/final_proj/ImmediateGenerator.vhd 
 # ** Note: (vcom-220) 'modelsim.ini' is used as the ini file.
 # -- Loading package STANDARD
@@ -66,11 +104,11 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity ImmediateGenerator
 # -- Compiling architecture Behavioral of ImmediateGenerator
-# End time: 12:19:29 on Jun 05,2026, Elapsed time: 0:00:00
+# End time: 15:06:50 on Jun 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/bvu1/Downloads/final_proj/ALU.vhd}
 # Questa Altera Starter FPGA Edition-64 vcom 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 12:19:29 on Jun 05,2026
+# Start time: 15:06:51 on Jun 08,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/bvu1/Downloads/final_proj/ALU.vhd 
 # ** Note: (vcom-220) 'modelsim.ini' is used as the ini file.
 # -- Loading package STANDARD
@@ -79,11 +117,23 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity ALU
 # -- Compiling architecture behavior of ALU
-# End time: 12:19:29 on Jun 05,2026, Elapsed time: 0:00:00
+# End time: 15:06:51 on Jun 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/bvu1/Downloads/final_proj/Mux.vhd}
+# Questa Altera Starter FPGA Edition-64 vcom 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 15:06:51 on Jun 08,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/bvu1/Downloads/final_proj/Mux.vhd 
+# ** Note: (vcom-220) 'modelsim.ini' is used as the ini file.
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Mux
+# -- Compiling architecture Mux of Mux
+# End time: 15:06:51 on Jun 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/bvu1/Downloads/final_proj/Processor.vhd}
 # Questa Altera Starter FPGA Edition-64 vcom 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 12:19:30 on Jun 05,2026
+# Start time: 15:06:52 on Jun 08,2026
 # vcom -reportprogress 300 -93 -work work C:/Users/bvu1/Downloads/final_proj/Processor.vhd 
 # ** Note: (vcom-220) 'modelsim.ini' is used as the ini file.
 # -- Loading package STANDARD
@@ -94,15 +144,19 @@
 # -- Compiling architecture Behavioral of Processor
 # -- Loading entity PC
 # -- Loading entity InstructionMemory
+# -- Loading entity RegisterFile
 # -- Loading entity ImmediateGenerator
 # -- Loading entity ALU
-# End time: 12:19:30 on Jun 05,2026, Elapsed time: 0:00:00
+# -- Loading entity DataMemory
+# -- Loading entity ControlUnit
+# -- Loading entity Mux
+# End time: 15:06:52 on Jun 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-vsim -voptargs=+acc work.processor
+vsim -voptargs=+acc rtl_work.processor
 # ** Note: (vsim-220) 'modelsim.ini' is used as the ini file.
-# vsim -voptargs="+acc" work.processor 
-# Start time: 12:19:42 on Jun 05,2026
+# vsim -voptargs="+acc" rtl_work.processor 
+# Start time: 15:06:58 on Jun 08,2026
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
 # ** Note: (vopt-220) 'modelsim.ini' is used as the ini file.
@@ -114,38 +168,40 @@ vsim -voptargs=+acc work.processor
 # Loading work.processor(behavioral)#1
 # Loading work.pc(behavioral)#1
 # Loading work.instructionmemory(behavioral)#1
+# Loading work.registerfile(clean)#1
 # Loading work.immediategenerator(behavioral)#1
 # Loading work.alu(behavior)#1
+# Loading work.datamemory(staticram)#1
+# Loading work.controlunit(behavioral)#1
+# Loading work.mux(mux)#1
 add wave -position insertpoint sim:/processor/*
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: bvu1  Hostname: ECE-MJ0FRCEE  ProcessID: 10024
-#           Attempting to use alternate WLF file "./wlftgsb3i8".
+#           Attempting to use alternate WLF file "./wlftefvfxv".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftgsb3i8
+#           Using alternate file: ./wlftefvfxv
+add wave -position insertpoint sim:/processor/IREG/*
 do test.do
 # hexadecimal
-# ** UI-Msg (Error) (suppressible): (vsim-4008) Object 'WriteReg_t' not found.
+# ** UI-Msg (Error) (suppressible): (vsim-4008) Object 'clk' not found.
 # Error in macro ./test.do line 3
-# ** UI-Msg (Error) (suppressible): (vsim-4008) Object 'WriteReg_t' not found.
+# ** UI-Msg (Error) (suppressible): (vsim-4008) Object 'clk' not found.
 # 
 #     while executing
-# "force WriteReg_t "00000""
-do test.fo
-# Cannot open macro file: test.fo
-do test.fo
-# Cannot open macro file: test.fo
-do test.do
-# hexadecimal
-# ** UI-Msg (Error) (suppressible): (vsim-4008) Object 'ctrl' not found.
-# Error in macro ./test.do line 5
-# ** UI-Msg (Error) (suppressible): (vsim-4008) Object 'ctrl' not found.
-# 
-#     while executing
-# "force ctrl 2#00#"
+# "force clk '0'"
 do test.do
 # hexadecimal
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /processor/IDAT
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /processor/IDAT
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /processor/IREG
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /processor/IREG
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ns  Iteration: 0  Instance: /processor/IMEM
+add wave -position insertpoint sim:/processor/IDAT/*
 restart -f
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # ** Note: (vsim-8009) Loading existing optimized design _opt2
@@ -153,24 +209,14 @@ restart -f
 do test.do
 # hexadecimal
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /processor/IMEM
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-8009) Loading existing optimized design _opt2
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-do test.do
-# hexadecimal
+#    Time: 0 ns  Iteration: 0  Instance: /processor/IDAT
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /processor/IDAT
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /processor/IREG
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /processor/IREG
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ns  Iteration: 0  Instance: /processor/IMEM
-do test.do
-# hexadecimal
-restart  -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Note: (vsim-8009) Loading existing optimized design _opt2
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-do test.do
-# hexadecimal
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /processor/IMEM
-# End time: 12:30:58 on Jun 05,2026, Elapsed time: 0:11:16
-# Errors: 0, Warnings: 2
+# End time: 15:14:08 on Jun 08,2026, Elapsed time: 0:07:10
+# Errors: 0, Warnings: 6

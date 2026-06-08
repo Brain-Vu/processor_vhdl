@@ -1,5 +1,5 @@
 Flow report for final_proj
-Fri Jun  5 12:19:06 2026
+Mon Jun  8 15:06:29 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -41,7 +41,7 @@ on the Quartus Prime software download page.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Fri Jun  5 12:19:06 2026           ;
+; Flow Status                     ; Successful - Mon Jun  8 15:06:29 2026           ;
 ; Quartus Prime Version           ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
 ; Revision Name                   ; final_proj                                      ;
 ; Top-level Entity Name           ; Processor                                       ;
@@ -50,7 +50,7 @@ on the Quartus Prime software download page.
 ; Timing Models                   ; Final                                           ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
 ; Total registers                 ; 0                                               ;
-; Total pins                      ; 68                                              ;
+; Total pins                      ; 2                                               ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
 ; Total DSP Blocks                ; 0                                               ;
@@ -68,7 +68,7 @@ on the Quartus Prime software download page.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/05/2026 12:18:59 ;
+; Start date & time ; 06/08/2026 15:06:20 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; final_proj          ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ on the Quartus Prime software download page.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 84577038254419.178068713916996         ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 84577038254419.178095638012824         ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -104,8 +104,8 @@ on the Quartus Prime software download page.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 4902 MB             ; 00:00:19                           ;
-; Total                ; 00:00:07     ; --                      ; --                  ; 00:00:19                           ;
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4902 MB             ; 00:00:25                           ;
+; Total                ; 00:00:09     ; --                      ; --                  ; 00:00:25                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
